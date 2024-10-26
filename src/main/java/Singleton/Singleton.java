@@ -1,21 +1,18 @@
 package Singleton;
 
 public class Singleton {
-    private String name;
     private static Singleton instance;
 
-    private Singleton(String name){
-        this.name=name;
+    private Singleton(){
     }
 
-    public static synchronized Singleton getInstance(String name){
+    public static synchronized Singleton getInstance(){
         if(instance==null){
-            instance=new Singleton(name);
+            instance=new Singleton();
         }
         return instance;
     }
     public void getHashcode(){
         System.out.println("Hashcode of singleton instance: "+instance);
-        System.out.println("Name: "+name);
     }
 }
