@@ -22,11 +22,7 @@ public class Directory implements FileSystem{
         System.out.println("Directory name: "+directoryName);
 
         for(FileSystem fs: fileSystems){
-            if(fs instanceof File){
-                ((File) fs).ls();
-            } else if( fs instanceof Directory){
-                ((Directory) fs).ls();
-            }
+           fs.ls();
         }
     }
 }
